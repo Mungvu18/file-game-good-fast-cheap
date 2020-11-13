@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<input type="checkbox" id="good"  onclick="play(this)"><br>
+<input type="checkbox" id="fast"  onclick="play(this)"><br>
+<input type="checkbox" id="cheap" onclick="play(this)"><br>
+<script>
+    function play(e){
+        let obj = e.getAttribute('id');
+        let a = document.getElementById('good').style.left;
+        let distanceGood = parseInt(a);
+        let b = document.getElementById('fast').style.left;
+        let distanceFast = parseInt(b);
+        let c = document.getElementById('cheap').style.left;
+        let distanceCheap = parseInt(c);
+        let total = distanceCheap + distanceFast + distanceGood;
+        if(obj==='good') {
+            if (distanceGood < 50) {
+                if (total < 100) {
+                    a = a + 50 + 'px';
+                } else {
+                    a = a + 50 + 'px';
+                    b = b - 50 + 'px';
+                }
+            } else {
+                a = a - 50 + 'px';
+            }
+        }
+        if(obj==='fast'){
+            if (distanceFast<50){
+                if(total<100){
+                    b = b + 50 +' px';
+                } else {
+                    b = b + 50 + 'px';
+                    c = c - 50 + 'px';
+                }
+            }else {
+                b = b - 50 + 'px';
+            }
+        }
+        if (obj==="cheap"){
+            if(distanceCheap<50){
+                if(total<100){
+                    c = c + 50 + 'px';
+                } else {
+                    c = c + 50 + 'px';
+                    a = a - 50 + 'px';
+                }
+            } else {
+                c = c - 50 + 'px';
+            }
+        }
+        c = document.getElementById('cheap').style.left;
+        b = document.getElementById('fast').style.left;
+        a = document.getElementById('good').style.left;
+    }
+</script>
+</body>
+</html>

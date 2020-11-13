@@ -1,0 +1,21 @@
+#cheap {
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    background-color: aqua;
+    color: aqua;
+}
+#good {
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    background-color: burlywood;
+    color: burlywood;
+}
+#fast {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: chartreuse;
+    color: chartreuse;
+}
